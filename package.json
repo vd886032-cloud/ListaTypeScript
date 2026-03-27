@@ -1,0 +1,23 @@
+{
+  "name": "listatypescript",
+  "version": "1.0.0",
+  "description": "Lista de TS 2° DS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vd886032-cloud/ListaTypeScript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vd886032-cloud/ListaTypeScript/issues"
+  },
+  "homepage": "https://github.com/vd886032-cloud/ListaTypeScript#readme",
+  "devDependencies": {
+    "typescript": "^6.0.2"
+  }
+}
