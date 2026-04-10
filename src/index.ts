@@ -6,3 +6,7 @@ let ParOrImpar: any = (x:number):string =>{
     }
 }
 console.log(ParOrImpar(10))
+if (10> 2){
+    console.log("10 é maior que 2")
+
+}
