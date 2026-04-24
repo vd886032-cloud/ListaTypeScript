@@ -14,51 +14,53 @@
 // j) Outubro (10): Primavera
 // k) Novembro (11): Primavera
 // l) Dezembro (12): Primavera
-let input= prompt("Digite um Mês (1-12): ")
-if(!input){
-    console.log("Digite algo válido!")
-}else{
-    let mes = parseInt(input)
-    if(isNaN(mes)){
+export function cond02():void{
+     let input= prompt("Digite um Mês (1-12): ")
+     if(!input){
+     console.log("Digite algo válido!")
+     }else{
+     let mes = parseInt(input)
+     if(isNaN(mes)){
         console.log("Digite um número")
-    }else{
-    switch(mes){
-    case 1:
+     }else{
+     switch(mes){
+     case 1:
         console.log(`O mês correspondente ao número ${mes} é Janeiro`)
         break
-    case 2:
+     case 2:
          console.log(`O mês correspondente ao número ${mes} é Fevereiro`)
          break
-    case 3:
+     case 3:
          console.log(`O mês correspondente ao número ${mes} é Março`)
          break
-    case 4:
+     case 4:
          console.log(`O mês correspondente ao número ${mes} é Abril`)
          break
-    case 5: 
+     case 5: 
          console.log(`O mês correspondente ao número ${mes} é Maio`)
          break
-    case 6:
+     case 6:
          console.log(`O mês correspondente ao número ${mes} é Junho`)
          break
-    case 7: 
+     case 7: 
          console.log(`O mês correspondente ao número ${mes} é Julho`)
          break
-    case 8:
+     case 8:
          console.log(`O mês correspondente ao número ${mes} é Agosto`)
          break
-    case 9:
+     case 9:
          console.log(`O mês correspondente ao número ${mes} é Setembro`)
          break
-    case 10:
+     case 10:
          console.log(`O mês correspondente ao número ${mes} é Outubro`)
          break
-    case 11:
+     case 11:
          console.log(`O mês correspondente ao número ${mes} é Novembro`)
          break
-    case 12: 
+     case 12: 
              console.log(`O mês correspondente ao número ${mes} é Dezembro`)
              break
 } 
+}
 }
 }

@@ -1,4 +1,5 @@
-{"compilerOptions": {
+{
+"compilerOptions": {
 "moduleDetection": "force",
 "module": "ESNext",
 "target": "ES6",
