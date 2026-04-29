@@ -1,3 +1,4 @@
+
 import {cond01} from './exercícios/condicional/q1.js'
 import {cond02} from './exercícios/condicional/q2.js'
 import {cond03} from './exercícios/condicional/q3.js'
@@ -63,3 +64,4 @@ document.getElementById("btnArr06")?.addEventListener("click", arr06)
 document.getElementById("btnArr07")?.addEventListener("click", arr07)
 document.getElementById("btnArr08")?.addEventListener("click", arr08)
 document.getElementById("btnArr09")?.addEventListener("click", arr09)
+
