@@ -14,11 +14,11 @@ export function q2poo():void{
         mudarValorLado(novoValor: number){
             this.tamanhoLado = novoValor
         }
-        mostrarValorLado():void{
-            console.log(`Valor do lado: ${this.tamanhoLado}cm`)
+        mostrarValorLado(): string{
+            return (`Valor do lado: ${this.tamanhoLado}cm`)
         }
-        MostrarArea():void{
-            console.log(`Valor da área: ${this.area}cm²`)
+        MostrarArea(): string{
+            return(`Valor da área: ${this.area}cm²`)
         }
     }
     let tamanhoLadoQuadrado = Number(prompt("Digite a área do lado do seu quadrado: "))
@@ -28,16 +28,17 @@ export function q2poo():void{
         let p1 = Number(prompt(`Digite a alternativa desejada: 
             \n 1-mudar valor do lado 
             \n 2- mostrar valor do lado 
-            \n 3- mostrar área do quadrado`))
+            \n 3- mostrar área do quadrado
+            \n -1 - Sair`))
             if(p1 === 1){
                 let novoValor = Number(prompt("Digite o valor do lado: "))
                 quadrado.mudarValorLado(novoValor)
             }
             else if(p1 === 2){
-                quadrado.mudarValorLado
+                console.log(quadrado.mostrarValorLado())
             }
             else if(p1 === 3){
-                quadrado.MostrarArea
+                console.log(quadrado.MostrarArea())
             }
     }
 }
