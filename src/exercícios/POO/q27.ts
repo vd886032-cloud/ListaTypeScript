@@ -11,7 +11,7 @@ export function q27poo(): void {
     abstract class Equipamento {
         private tombamento: number
         private descricao: string
-
+        
         constructor(tombamento: number, descricao: string) {
             this.tombamento = tombamento
             this.descricao = descricao

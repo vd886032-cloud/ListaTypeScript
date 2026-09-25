@@ -61,8 +61,8 @@ export function q26poo(): void {
         }
     }
     let tipo = Number(prompt(`Escolha o tipo de conta:
-    \n 1- Conta Corrente
-    \n 2- Conta Poupança`))
+        \n 1- Conta Corrente
+        \n 2- Conta Poupança`))
     let nome = String(prompt("Digite o nome do titular: "))
     let saldo = Number(prompt("Digite o saldo inicial: "))
     let conta: Conta

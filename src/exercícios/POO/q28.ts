@@ -36,8 +36,7 @@ export function q28poo(): void {
 
     class SuiteMaster extends Acomodacao {
         private adicional_hidro: number
-        constructor(
-            numero_quarto: number, preco_base: number, adicional_hidro: number) {
+        constructor(numero_quarto: number, preco_base: number, adicional_hidro: number) {
             super(numero_quarto, preco_base)
             this.adicional_hidro = adicional_hidro
         }
@@ -101,10 +100,9 @@ export function q28poo(): void {
     console.log(`Quartos com faturamento acima de 1000: `)
     for (let hospedagem of listaCheckOut) {
         if (hospedagem.total() > 1000) {
-            console.log(`Quarto: ${hospedagem.quarto.NumeroQuarto}`)
-            console.log(`Dias: ${hospedagem.dias}`)
-            console.log(`Total: R$ ${hospedagem.total()}`)
-            console.log("---------------------------")
+            console.log(`Quarto: ${hospedagem.quarto.NumeroQuarto}
+            \n Dias: ${hospedagem.dias}
+            \n Total: R$ ${hospedagem.total()}`)
         }
     }
 }
