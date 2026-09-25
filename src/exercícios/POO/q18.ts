@@ -108,13 +108,7 @@ export function q18poo(): void {
         private departamento: string
         private gratificacao: number
 
-        constructor(
-            nome: string,
-            matricula: number,
-            salario_base: number,
-            departamento: string,
-            gratificacao: number
-        ) {
+        constructor(nome: string, matricula: number, salario_base: number, departamento: string, gratificacao: number) {
             super(nome, matricula, salario_base)
             this.departamento = departamento
             this.gratificacao = gratificacao
@@ -126,13 +120,11 @@ export function q18poo(): void {
     }
 
     let quest = 0
-
     let totalProf = 0
     let totalTec = 0
     let totalDir = 0
 
     while (quest != -1) {
-
         quest = Number(prompt(`Digite a alternativa desejada:
                 \n 1- Cadastrar Professor
                 \n 2- Cadastrar Técnico
@@ -140,7 +132,6 @@ export function q18poo(): void {
                 \n -1- Encerrar`))
         switch (quest) {
             case 1:
-
                 let nomeP = String(prompt("Digite o nome: "))
                 let matP = Number(prompt("Digite a matrícula: "))
                 let salP = Number(prompt("Digite o salário base: "))

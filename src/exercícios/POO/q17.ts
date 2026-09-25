@@ -66,29 +66,25 @@ export function q17poo(): void {
 
         switch (quest) {
             case 1:
-                let idAluno = Number(prompt("Digite o ID: "))
-                let nomeAluno = String(prompt("Digite o nome: "))
-                let cursoAluno = String(prompt("Digite o curso: "))
+                let idAluno = Number(prompt("Digite o ID do aluno: "))
+                let nomeAluno = String(prompt("Digite o nome do aluno: "))
+                let cursoAluno = String(prompt("Digite seu curso: "))
                 fila.push(new Aluno(idAluno, nomeAluno, cursoAluno))
                 break
             case 2:
-
-                let idServidor = Number(prompt("Digite o ID: "))
-                let nomeServidor = String(prompt("Digite o nome: "))
+                let idServidor = Number(prompt("Digite o ID do servidor: "))
+                let nomeServidor = String(prompt("Digite o nome do servidor: "))
                 let depServidor = String(prompt("Digite o departamento: "))
 
                 fila.push(new Servidor(idServidor, nomeServidor, depServidor))
                 break
 
             case 3:
-
                 let idBusca = Number(prompt("Digite o ID do usuário: "))
                 let encontrado = false
 
                 for (let usuario of fila) {
-
                     if (usuario.Id == idBusca) {
-
                         historico.push(usuario)
                         fila.splice(fila.indexOf(usuario), 1)
 
@@ -101,11 +97,9 @@ export function q17poo(): void {
                 if (!encontrado) {
                     console.log("Usuário não encontrado.")
                 }
-
                 break
 
             case -1:
-
                 console.log("Sistema encerrado.")
                 break
 

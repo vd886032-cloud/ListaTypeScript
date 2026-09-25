@@ -65,34 +65,27 @@ export function q19poo(): void {
         switch (quest) {
 
             case 1:
-
                 let codTemp = Number(prompt("Digite o código do sensor: "))
                 let leituraTemp = Number(prompt("Digite a temperatura: "))
 
                 listaSensores.push(
                     new SensorTemperatura(codTemp, leituraTemp)
                 )
-
                 break
-
             case 2:
-
                 let codPres = Number(prompt("Digite o código do sensor: "))
                 let leituraPres = Number(prompt("Digite a pressão: "))
 
                 listaSensores.push(
                     new SensorPressao(codPres, leituraPres)
                 )
-
                 break
 
             case -1:
-
                 console.log("Encerrando cadastro...")
                 break
 
             default:
-
                 console.log("Opção inválida.")
         }
     }

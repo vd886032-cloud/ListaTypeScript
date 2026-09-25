@@ -69,14 +69,14 @@ export function q24poo(): void {
 
         switch (quest) {
             case 1:
-                let descA = String(prompt("Digite a descrição: "))
+                let descA = String(prompt("Digite a descrição da atividade: "))
                 let disc = String(prompt("Digite a disciplina: "))
                 listaTarefas.push(
                     new TarefaAcademica(descA, disc)
                 )
                 break
             case 2:
-                let descP = String(prompt("Digite a descrição: "))
+                let descP = String(prompt("Digite a descrição da tarefa: "))
                 let prior = String(prompt("Digite a prioridade: "))
                 listaTarefas.push(
                     new TarefaPessoal(descP, prior)
@@ -103,7 +103,6 @@ export function q24poo(): void {
                     console.log(`Tarefas pendentes: `)
                     if (tarefa instanceof TarefaAcademica && !tarefa.Concluida) {
                         console.log(tarefa.identificar())
-                        console.log("----------------------")
                     }
                 }
                 break

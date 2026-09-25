@@ -61,8 +61,8 @@ export function q23poo(): void {
         \n -1- Finalizar estoque`))
         switch (quest) {
             case 1:
-                let codP = Number(prompt("Digite o código: "))
-                let nomeP = String(prompt("Digite o nome: "))
+                let codP = Number(prompt("Digite o código do produto: "))
+                let nomeP = String(prompt("Digite o nome do produto: "))
                 let precoP = Number(prompt("Digite o preço de custo: "))
                 let validade = Number(prompt("Digite o dia do vencimento: "))
 
@@ -71,7 +71,7 @@ export function q23poo(): void {
                 )
                 break
             case 2:
-                let codN = Number(prompt("Digite o código: "))
+                let codN = Number(prompt("Digite o código do produto: "))
                 let nomeN = String(prompt("Digite o nome: "))
                 let precoN = Number(prompt("Digite o preço de custo: "))
 

@@ -68,7 +68,7 @@ export function q21poo(): void {
         \n -1- Finalizar inscrições`))
         switch (quest) {
             case 1:
-                let tituloV = String(prompt("Digite o título: "))
+                let tituloV = String(prompt("Digite o título do projeto: "))
                 let coordV = String(prompt("Digite o coordenador: "))
                 let notaV = Number(prompt("Digite a nota (0 a 10): "))
                 listaProjetos.push(
@@ -76,7 +76,7 @@ export function q21poo(): void {
                 )
                 break
             case 2:
-                let tituloC = String(prompt("Digite o título: "))
+                let tituloC = String(prompt("Digite o título do projeto: "))
                 let coordC = String(prompt("Digite o coordenador: "))
                 let notaC = Number(prompt("Digite a nota (0 a 10): "))
 

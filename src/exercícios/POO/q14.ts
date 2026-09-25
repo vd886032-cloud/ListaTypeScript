@@ -6,9 +6,7 @@
 // 14. Arrays Repetição Encapsulamento
 
 export function q14poo(): void {
-
     class Livro {
-
         private titulo: string
         private autor: string
         private ano_publi: number
@@ -20,7 +18,6 @@ export function q14poo(): void {
             this.ano_publi = ano_publi
             this.disponibilidade = true
         }
-
         get Titulo(): string {
             return this.titulo
         }
@@ -35,9 +32,9 @@ export function q14poo(): void {
 
         resumo(): string {
             return `Título: ${this.titulo}
-            Autor: ${this.autor}
-            Ano: ${this.ano_publi}
-            Disponível: ${this.disponibilidade ? "Sim" : "Não"}`
+            \n Autor: ${this.autor}
+            \n Ano: ${this.ano_publi}
+            \n Disponível: ${this.disponibilidade ? "Sim" : "Não"}`
         }
     }
     let lista: Livro[] = []
@@ -49,7 +46,7 @@ export function q14poo(): void {
         let novoLivro = new Livro(titulo_livro, autor_livro, ano_publi)
         lista.push(novoLivro)
 
-        let continuar = Number(prompt("Cadastrar outro livro? (1 = Sim / 0 = Não)"))
+        let continuar = Number(prompt("deseja cadastrar outro livro? (1: Sim / 0: Não)"))
 
         if (continuar == 0) {
             break
@@ -61,10 +58,9 @@ export function q14poo(): void {
     while (quest != -1) {
 
         quest = Number(prompt(`Digite a alternativa desejada:
-
-        1 - Listar livros disponíveis
-        2 - Emprestar livro
-        -1 - Sair`))
+        \n 1 - Listar livros disponíveis
+        \n 2 - Emprestar livro
+        \n -1 - Sair`))
         switch (quest) {
             case 1:
                 for (let livro of lista) {

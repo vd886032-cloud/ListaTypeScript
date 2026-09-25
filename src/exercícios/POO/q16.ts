@@ -38,13 +38,7 @@ export function q16poo(): void {
 
         tipo_alimentacao: string
 
-        constructor(
-            nome: string,
-            especie: string,
-            idade: number,
-            sexo: string,
-            tipoAlimentacao: string
-        ) {
+        constructor(nome: string, especie: string, idade: number, sexo: string, tipoAlimentacao: string) {
             super(nome, especie, idade, sexo)
             this.tipo_alimentacao = tipoAlimentacao
         }
@@ -59,16 +53,8 @@ export function q16poo(): void {
     }
 
     class Aves extends Animal {
-
         migratorias: boolean
-
-        constructor(
-            nome: string,
-            especie: string,
-            idade: number,
-            sexo: string,
-            migratorias: boolean
-        ) {
+        constructor(nome: string, especie: string, idade: number, sexo: string, migratorias: boolean) {
             super(nome, especie, idade, sexo)
             this.migratorias = migratorias
         }
@@ -81,37 +67,28 @@ export function q16poo(): void {
             return "A ave voa."
         }
     }
-
     function simularHoraAlimentacao(listaAnimais: Animal[]): void {
-
-        console.log("=== HORA DA ALIMENTAÇÃO ===")
-
         for (let animal of listaAnimais) {
-            console.log(`O tratador está alimentando ${animal.Nome}`)
-            console.log(animal.emitir_som())
-            console.log("---------------------------")
+            console.log(`O tratador está alimentando ${animal.Nome}
+            \n ${console.log(animal.emitir_som())}`)
+            
         }
     }
-
     let quest = 0
     let listaAnimais: Animal[] = []
-
     while (quest != -1) {
-
         quest = Number(prompt(
-            "Digite a alternativa desejada:\n" +
-            "1 - Cadastrar mamífero\n" +
-            "2 - Cadastrar ave\n" +
-            "3 - Listar mamíferos\n" +
-            "4 - Listar aves\n" +
-            "5 - Hora da alimentação\n" +
-            "-1 - Sair"
+            `Digite a alternativa desejada: 
+            \n 1 - Cadastrar mamífero
+            \n 2 - Cadastrar ave
+            \n 3 - Listar mamíferos
+            \n 4 - Listar aves
+            \n 5 - Hora da alimentação
+            \n -1 - Sair`
         ))
 
         switch (quest) {
-
             case 1:
-
                 let nomeM = String(prompt("Nome: "))
                 let especieM = String(prompt("Espécie: "))
                 let idadeM = Number(prompt("Idade: "))
@@ -129,47 +106,33 @@ export function q16poo(): void {
                 let sexoA = String(prompt("Sexo: "))
                 let mig = String(prompt("É migratória? (S/N)"))
                 listaAnimais.push(
-                    new Aves(
-                        nomeA,
-                        especieA,
-                        idadeA,
-                        sexoA,
-                        mig.toUpperCase() == "S"
+                    new Aves(nomeA, especieA,  idadeA, sexoA, mig.toUpperCase() == "S"
                     )
                 )
                 break
             case 3:
-                console.log("=== MAMÍFEROS ===")
-
                 for (let animal of listaAnimais) {
                     if (animal instanceof Mamifero) {
-                        console.log(`Nome: ${animal.Nome}`)
-                        console.log(`Espécie: ${animal.Especie}`)
-                        console.log(`Alimentação: ${animal.tipo_alimentacao}`)
-                        console.log(animal.mover())
-                        console.log("----------------")
+                        console.log(`Nome: ${animal.Nome}
+                        \n Espécie: ${animal.Especie}
+                        \n Alimentação: ${animal.tipo_alimentacao}
+                        ${console.log(animal.mover())}`)
                     }
                 }
                 break
             case 4:
-                console.log("=== AVES ===")
-
                 for (let animal of listaAnimais) {
                     if (animal instanceof Aves) {
-                        console.log(`Nome: ${animal.Nome}`)
-                        console.log(`Espécie: ${animal.Especie}`)
-                        console.log(`Migratória: ${animal.migratorias ? "Sim" : "Não"}`)
-                        console.log(animal.mover())
-                        console.log("----------------")
+                        console.log(`Nome: ${animal.Nome}
+                        \n Espécie: ${animal.Especie}
+                        \n Migratória: ${animal.migratorias ? "Sim" : "Não"}
+                        ${console.log(animal.mover())}`)
                     }
                 }
-
                 break
-
             case 5:
                 simularHoraAlimentacao(listaAnimais)
                 break
-
             case -1:
                 console.log("Programa encerrado.")
                 break
