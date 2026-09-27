@@ -31,8 +31,8 @@ export function q39poo():void{
         constructor(numP:number, valorBase:number){
             super(numP, valorBase)
         }
-        aplicarTaxa(): number{
-            return this.Num_pedido+ (this.Num_pedido*0.1)
+        calcularTotal(): number{
+            return this.valor_baseP+ (this.valor_baseP*0.1)
         }
 
     }
@@ -41,13 +41,14 @@ export function q39poo():void{
          constructor(numP:number, valorBase:number){
             super(numP, valorBase)
         }
-        aplicarTaxa(): number{
-            return this.Num_pedido+ 3
+        calcularTotal(): number{
+            return this.valor_baseP+ 3
         }
     }
 
     let quest = 0
     let resumo: Pedido[] = []
+    let valor_total = 0
     while(quest != -1){
         quest = Number(prompt(`Digite a alternativa desejada: 1- Cadastrar pedido local
         \n 2- Adicionar pedido drivethru
@@ -55,11 +56,30 @@ export function q39poo():void{
         
         switch (quest){
             case 1:
-            let numero = Number(prompt("Digite o Número do pedido: "))
-            let valor = Number(prompt("Digite o valor do pedido: "))
-            let novoPedido = new PedidoLocal(numero, valor)
-            
-        }
-           
+                let numero = Number(prompt("Digite o Número do pedido: "))
+                let valor = Number(prompt("Digite o valor do pedido: "))
+                let novoPedido = new PedidoLocal(numero, valor)
+                resumo.push(novoPedido)
+                valor_total+= novoPedido.calcularTotal()
+                break
+            case 2:
+                numero = Number(prompt("Digite o Número do pedido: "))
+                valor = Number(prompt("Digite o valor do pedido: "))
+                novoPedido = new DriveThru(numero, valor)
+                resumo.push(novoPedido)
+                valor_total+= novoPedido.calcularTotal()
+                break
+            case -1:
+                console.log("Programa encerrado.")
+                break
+            default:
+                console.log("Número inválido")
+        }  
     }
+    for(let pedido of resumo){
+        console.log(`Número do pedido: ${pedido.Num_pedido}
+            \n valor base do pedido: ${pedido.valor_baseP}
+            \n Valor total do pedido: ${pedido.calcularTotal()}`)
+    }
+    console.log(`Faturamento total: R$ ${valor_total}`)
 }
